@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#block-leroy-primary-local-tasks ul {
+  @apply flex flex-row container mx-auto space-x-5 border-b border-gray-200
+}
+
+#block-leroy-primary-local-tasks ul li {
+  @apply bg-gray-200 text-blue-500 text-xl rounded-sm px-4 py-2
+}
+
+#search-block-form {
+  @apply flex flex-row
+}
+
+#search-block-form #edit-keys {
+  @apply rounded px-4 py-2
+}
+
+#edit-submit {
+  @apply bg-orange-600 text-white px-4 py-2
+}

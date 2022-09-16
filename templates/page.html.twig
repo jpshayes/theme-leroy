@@ -44,8 +44,9 @@
  */
 #}
 <div class="layout-container">
-
-  <header role="banner">
+  {#  /--Header Classes--/  #}
+  {% set header_classes = [ 'fixed', 'w-full', 'block', 'h-16', 'bg-white', 'shadow-2xl' ,] %}
+  <header role="banner" {{ attributes.addClass(header_classes) }}>
     {{ page.header }}
   </header>
 
@@ -58,7 +59,7 @@
 
   {{ page.help }}
 
-  <main role="main">
+  <main role="main" class="container mx-auto">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
