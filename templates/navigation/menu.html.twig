@@ -38,7 +38,7 @@
     {% endif %}
     {% for item in items %}
     {#  /--Menu Item Classes--/ #}
-      {% set item_classes = ['p-4', 'text-neutral-800',] %}
+      {% set item_classes = ['p-4', 'text-white',] %}
       <li{{ item.attributes.addClass(item_classes) }}>
         {{ link(item.title, item.url) }}
         {% if item.below %}

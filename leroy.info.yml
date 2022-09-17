@@ -9,6 +9,8 @@ libraries:
 base theme: stable9
 regions:
   header: 'Header'
+  highlighted: 'Highlighted'
+  help: 'Help'
   content: 'Content'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'

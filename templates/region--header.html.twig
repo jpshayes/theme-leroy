@@ -12,8 +12,9 @@
  * @see template_preprocess_region()
  */
 #}
+{% set nav_wrapper_classes = ['container', 'mx-auto', 'flex', 'flex-row', 'items-center', 'h-16', 'z-10' ] %}
 {% if content %}
-  <div{{ attributes }}>
+  <div{{ attributes.addClass(nav_wrapper_classes) }}>
     {{ content }}
   </div>
 {% endif %}

@@ -71,7 +71,8 @@
 
   {{ title_prefix }}
   {% if label and not page %}
-    <h2{{ title_attributes }}>
+  {% set title_classes = ['text-3xl', 'text-neutral-700', 'font-semibold'] %}
+    <h2{{ title_attributes.addClass(title_classes) }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
     </h2>
   {% endif %}
