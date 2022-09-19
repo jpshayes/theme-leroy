@@ -27,13 +27,18 @@
 
 {{ menus.menu_links(items, attributes, 0) }}
 
+    <button id="mobile-toggle" aria-controls="mobile-menu" class=" inline-flex items-center justify-center rounded-md p-2 text-green-400 hover:bg-green-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-white">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+    </button>
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('menu') }}>
+      <ul id="mobile-menu" {{ attributes.addClass('hidden') }}>
     {% else %}
-      <ul class="menu">
+      <ul id="mobile-menu" class="menu hidden">
     {% endif %}
     {% for item in items %}
       {%

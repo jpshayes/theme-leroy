@@ -43,27 +43,38 @@
  * @see html.html.twig
  */
 #}
+
+
 {# /--Header Classes--/  #}
 {%
-  set header_classes = [
+  set navbar_classes = [
     'fixed',
-    'bg-slate-900', 
+    'bg-slate-900' , 
     'w-full', 
     'block',
-    'h-16',
     'shadow-2xl',
-    'z-10',
+    'z-10', 
+    'backdrop-blur',
+    'flex-none',
   ] 
 %}
+
+
 {# /--Layout Classes--/ #}
+
 {% if (page.sidebar_first or page.sidebar_second) %}
-{% set layout_classes = ['container', 'mx-auto', 'flex', 'flex-row','justify-between', 'py-32',] %}
+{% set layout_classes = ['container', 'mx-auto', 'flex', 'flex-row','justify-between', 'py-32', 'px-2', 'lg:px-0'] %}
 {% else %}
-{% set layout_classes = ['container', 'mx-auto', 'py-32',] %}
+{% set layout_classes = ['container', 'mx-auto', 'py-32', 'px-4', 'lg:px-0'] %}
 {% endif %}
-<div class="layout-container">
-  <header role="banner" {{ attributes.addClass(header_classes) }}>
+
+
+
+<div id="layout" class="layout-container">
+  <header role="banner">
+    <div {{ attributes.addClass(navbar_classes) }}>
     {{ page.header }}
+    </div>
   </header>
 
   {{ page.primary_menu }}
@@ -77,10 +88,14 @@
   </div>
   {% endif %}
 
-  {{ page.help }}
+  {% if page.help %}
+  <div class="help container mx-auto">
+    {{ page.help }}
+  </div>
+  {% endif %}
   
 
-  <main role="main" {{ attributes.addClass(layout_classes).removeClass(header_classes) }}>
+  <main role="main" {{ attributes.addClass(layout_classes).removeClass(navbar_classes) }}>
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content flex-1">

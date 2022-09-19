@@ -9,12 +9,8 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    [
-      "postcss-preset-env",
-      {
-        // Options
-      },
-    ],
+    ["postcss-preset-env",{},],
+    require('@tailwindcss/forms'),
   ],
 
 }

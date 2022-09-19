@@ -2,6 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
+/* /--Base--/ */
+
+p {
+  @apply leading-relaxed text-lg mb-3
+}
+/* /--Menus--/ */
+
+/* Primary Nav */
+
+#block-leroy-main-menu ul.menu {
+  @apply hidden md:flex flex-row justify-end items-center h-16
+}
+
+#block-leroy-main-menu ul.menu li a {
+  @apply p-4 text-white
+}
+
+#block-leroy-main-menu ul.menu li.menu-item--expanded {
+}
+
+#block-leroy-main-menu ul.menu li.menu-item--expanded ul.menu {
+  @apply h-auto w-24
+}
+
+#block-leroy-main-menu ul.menu li.menu-item--expanded ul {
+  @apply hidden absolute bg-white text-neutral-700 rounded shadow top-12 border border-neutral-300 block
+}
+
+#block-leroy-main-menu ul.menu li.menu-item--expanded ul.menu a {
+  @apply py-1 px-2 text-neutral-700 block text-sm hover:bg-neutral-200
+}
+
+/* Mobile Nav */
+
+#block-mainnavigation {
+  @apply block md:hidden
+}
+
+#block-mainnavigation.contextual-region {
+  @apply static
+}
+
+#block-mainnavigation #mobile-menu {
+  @apply w-full bg-slate-900 absolute top-[64px] inset-x-0 h-screen items-center p-12
+}
+
+#block-mainnavigation #mobile-menu li {
+  @apply block w-full static
+}
+
+#block-mainnavigation #mobile-menu li a {
+  @apply block w-full text-white text-2xl font-semibold text-center p-4 bg-slate-800 mb-2 rounded-lg border-[1px] border-blue-900
+}
+
+
+/* /--Regions--/ */
+
+/* Help */
+
+.help div [aria-label="Status message"] {
+  @apply bg-green-500 text-white rounded drop-shadow-xl p-4 my-4 text-lg mt-20
+}
+
+/* End Help */
+
+/* /--Say Hello--/ */
+
+/* Webform */
+
+.close {
+  @apply absolute right-0 p-1 text-blue-700
+}
+
+#block-webform {
+  @apply w-full bg-white md:bg-transparent md:w-96 fixed bottom-3 right-0 bottom-0 md:right-3 md:bottom-3 hidden z-50
+}
+
+#block-webform .chat-wrapper {
+  @apply w-full h-full md:h-auto md:w-96 bg-white md:bg-neutral-100 rounded-xl p-8 filter-none md:shadow-2xl
+}
+
+#block-webform  #edit-processed-text {
+  @apply mb-2
+}
+
+.chat-wrapper label {
+  @apply block italic text-neutral-600
+}
+
+.chat-wrapper input.form-item, .chat-wrapper textarea.form-item {
+  @apply bg-neutral-200 text-neutral-700 rounded w-full
+}
+
+#block-webform #edit-actions {
+  @apply bg-gradient-to-b from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-center w-full md:w-96 p-5 md:p-2 rounded-none md:rounded-xl text-white mt-3 text-2xl
+}
+
+/* End Webform */
+
 #block-leroy-primary-local-tasks ul {
   @apply flex flex-row container mx-auto space-x-5 border-b border-gray-200
 }

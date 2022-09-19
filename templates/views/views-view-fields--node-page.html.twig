@@ -51,4 +51,9 @@
   {%- endif %}
 {%- endfor %} #}
 
-<div class="bg-cover bg-center items-center w-full h-96 py-96" style="background-image: url({{ fields.field_image.content }})"><h1 class="text-9xl text-white text-center">{{ fields.field_hero_image_text.content }}</h1></div>
+<div class="bg-fixed bg-center bg-cover items-center w-full py-40 md:py-80 " style="background-image: url({{ fields.field_image.content }})">
+  <div class="container mx-auto text-center md:text-left">
+    <h1 class="text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white mb-6 align-top">{{ fields.field_hero_image_text.content }}</h1>
+    <button id="send-message" class="text-lg md:text-2xl bg-gradient-to-b from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-600 px-6 md:px-8 py-3 md:py-3 text-white text rounded border-1 border-orange-700">Send Him a Message</button>
+  </div>
+</div>
